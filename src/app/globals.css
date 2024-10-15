@@ -1,0 +1,49 @@
+/* styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  @apply opacity-0; /* Start as invisible */
+  animation: fadeIn 300ms ease-in forwards; /* Animation properties */
+}
+
+/* Optional: Ensure the element is visible */
+.fade-in-visible {
+  @apply opacity-100; /* End state */
+}
+
+.fade-in-five-seconds {
+  @apply opacity-0; /* Start as invisible */
+  animation: fadeIn 500ms ease-in forwards; /* Animation properties */
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0; /* Start invisible */
+    transform: translateY(10px); /* Start 10px down */
+  }
+  100% {
+    opacity: 1; /* Fully visible */
+    transform: translateY(0); /* End in original position */
+  }
+}
+
+.fade-up {
+  @apply opacity-0; /* Start as invisible */
+  animation: fadeUp 500ms ease-in forwards; /* Animation properties */
+}
+
+/* Optional: Ensure the element is visible */
+.fade-up-visible {
+  @apply opacity-100; /* End state */
+}
